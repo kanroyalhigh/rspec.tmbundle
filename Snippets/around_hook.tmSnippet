@@ -4,17 +4,19 @@
 <dict>
 	<key>content</key>
 	<string>
-before${1|(:example),(:context),(:suite)|}${2:, type:}${3: :model} do
-  $0
+around(:example) do |example|
+  ${1:# lines of code that will be ran around example before...}
+  example.run
+  ${2:# lines of code that will be ran around example after...}
 end
-</string>
+  </string>
 	<key>name</key>
-	<string>before</string>
+	<string>around(:example) do |example| ... end</string>
 	<key>scope</key>
 	<string>source.ruby.rspec</string>
 	<key>tabTrigger</key>
-	<string>bef</string>
+	<string>aro</string>
 	<key>uuid</key>
-	<string>7D960FC5-4859-4328-A06B-73A3CF6763E0</string>  
+	<string>424F7EDB-E6EC-4166-AA67-55032426A92A</string>
 </dict>
 </plist>
